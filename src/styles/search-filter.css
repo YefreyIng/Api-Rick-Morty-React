@@ -1,4 +1,4 @@
-/* Estilos del componente SearchFilter */
+
 
 .search-container {
   padding: var(--spacing-lg) var(--spacing-md);
@@ -59,7 +59,7 @@
   transform: translateY(-50%) scale(1.2);
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   .search-container {
     padding: var(--spacing-md);

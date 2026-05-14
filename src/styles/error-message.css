@@ -1,4 +1,4 @@
-/* Estilos del componente ErrorMessage */
+
 
 .error-container {
   padding: var(--spacing-lg) var(--spacing-md);
@@ -42,7 +42,7 @@
   }
 }
 
-/* Responsivo */
+
 @media (max-width: 480px) {
   .error-container {
     padding: var(--spacing-md);

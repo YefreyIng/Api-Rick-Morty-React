@@ -1,22 +1,22 @@
-# 🚀 Instrucciones de Inicio Rápido
+﻿#  Instrucciones de Inicio Rápido
 
-## ✅ Proyecto Creado Exitosamente
+##  Proyecto Creado Exitosamente
 
 Tu aplicación SPA de Rick and Morty está lista para usar.
 
-## 📋 Requisitos Previos
+##  Requisitos Previos
 
-- ✅ Node.js instalado
-- ✅ npm o yarn disponible en terminal
+-  Node.js instalado
+-  npm o yarn disponible en terminal
 
-## 🎯 Pasos para Ejecutar
+##  Pasos para Ejecutar
 
 ### 1️⃣ Navega al directorio del proyecto
 ```bash
 cd "API de Rick and Morty"
 ```
 
-### 2️⃣ Las dependencias ya están instaladas ✅
+### 2️⃣ Las dependencias ya están instaladas 
 Si necesitas reinstalar:
 ```bash
 npm install
@@ -33,7 +33,7 @@ Haz clic en el enlace que aparece en la terminal (típicamente):
 http://localhost:3000
 ```
 
-## 📁 Archivos Principales
+##  Archivos Principales
 
 ### Componentes (`src/components/`)
 - **Navbar.jsx** - Barra de navegación con dropdown
@@ -55,18 +55,18 @@ http://localhost:3000
 ### Estilos (`src/styles/`)
 - 11 archivos CSS con diseño responsivo moderno
 
-## 🎨 Características Implementadas
+##  Características Implementadas
 
-✅ **Búsqueda en tiempo real** por nombre de personaje
-✅ **Filtrado por especie** con rutas dinámicas (`/species/Human`, etc.)
-✅ **Paginación completa** para navegar resultados
-✅ **Estados de carga** con spinner elegante
-✅ **Manejo de errores** con mensajes claros
-✅ **Página 404** personalizada para rutas inexistentes
-✅ **Diseño responsivo** (PC, tablet, móvil)
-✅ **Navbar pegajoso** con menú desplegable
-✅ **Tarjetas interactivas** con hover effects
-✅ **Tema moderno** oscuro con colores neón
+ **Búsqueda en tiempo real** por nombre de personaje
+ **Filtrado por especie** con rutas dinámicas (`/species/Human`, etc.)
+ **Paginación completa** para navegar resultados
+ **Estados de carga** con spinner elegante
+ **Manejo de errores** con mensajes claros
+ **Página 404** personalizada para rutas inexistentes
+ **Diseño responsivo** (PC, tablet, móvil)
+ **Navbar pegajoso** con menú desplegable
+ **Tarjetas interactivas** con hover effects
+ **Tema moderno** oscuro con colores neón
 
 ## 🌐 Rutas Disponibles
 
@@ -80,14 +80,14 @@ http://localhost:3000
 | `/species/Disease` | Enfermedades |
 | Cualquier otra ruta | Página 404 |
 
-## 📱 Responsive en
+##  Responsive en
 
-- ✅ PC (1200px+)
-- ✅ Tablet (768px - 1199px)
-- ✅ Móvil (480px - 767px)
-- ✅ Teléfono pequeño (<480px)
+-  PC (1200px+)
+-  Tablet (768px - 1199px)
+-  Móvil (480px - 767px)
+-  Teléfono pequeño (<480px)
 
-## 🛠️ Comandos Disponibles
+##  Comandos Disponibles
 
 ```bash
 # Servidor de desarrollo
@@ -100,7 +100,7 @@ npm run build
 npm run preview
 ```
 
-## 🎯 Próximos Pasos
+##  Próximos Pasos
 
 1. Ejecuta `npm run dev`
 2. Abre `http://localhost:3000` en tu navegador
@@ -111,14 +111,14 @@ npm run preview
    - Navegar entre páginas
    - Acceder a rutas inexistentes para ver la página 404
 
-## 📚 Información de la API
+##  Información de la API
 
 - **API**: Rick and Morty API
 - **URL**: https://rickandmortyapi.com/api
 - **Datos**: +800 personajes disponibles
-- **Sin autenticación requerida**: ✅
+- **Sin autenticación requerida**: 
 
-## 💡 Consejos
+##  Consejos
 
 - El proyecto usa **Vite** para desarrollo super rápido
 - Los cambios se reflejan instantáneamente en el navegador (Hot Reload)
@@ -145,11 +145,12 @@ npm install
 - Asegúrate de tener conexión a internet
 - La API debe estar disponible en: https://rickandmortyapi.com/api
 
-## 🎉 ¡Listo!
+##  ¡Listo!
 
 Tu aplicación está completamente funcional y lista para usar.
-Disfruta explorando el universo de Rick and Morty. 🚀✨
+Disfruta explorando el universo de Rick and Morty. 
 
 ---
 
 **Última actualización**: 13 de mayo de 2026
+

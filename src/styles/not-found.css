@@ -1,4 +1,4 @@
-/* Estilos de la página 404 */
+
 
 .not-found-page {
   flex-grow: 1;
@@ -101,7 +101,7 @@
   }
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   .not-found-page {
     min-height: calc(100vh - 60px);

@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import '../styles/navbar.css'
 
-/**
- * Componente Navbar con navegación principal
- */
+
 function Navbar() {
   const navigate = useNavigate()
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -26,7 +24,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          🔬 Rick and Morty
+          Rick and Morty
         </Link>
 
         <ul className="nav-menu">

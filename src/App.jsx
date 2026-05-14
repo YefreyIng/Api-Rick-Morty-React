@@ -6,9 +6,7 @@ import SpeciesPage from './pages/SpeciesPage'
 import NotFound from './pages/NotFound'
 import './styles/app.css'
 
-/**
- * Componente principal de la aplicación
- */
+
 function App() {
   return (
     <Router>

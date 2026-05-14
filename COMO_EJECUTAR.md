@@ -1,4 +1,4 @@
-# 🎬 VIDEO TUTORIAL - Cómo ejecutar la aplicación
+﻿# 🎬 VIDEO TUTORIAL - Cómo ejecutar la aplicación
 
 ## Paso a Paso para Ejecutar
 
@@ -45,18 +45,18 @@ npm run dev
 
 ---
 
-## 🎯 Una Vez que la Aplicación Esté Ejecutándose
+##  Una Vez que la Aplicación Esté Ejecutándose
 
 ### ¿Qué verás?
 
 ```
 ┌─────────────────────────────────────┐
-│  🔬 Rick and Morty - Navbar         │
+│   Rick and Morty - Navbar         │
 │  [Inicio] [Filtrar por Especie ▼]   │
 └─────────────────────────────────────┘
 │
 │ ┌──────────────────────────────────┐
-│ │ 🔍 Buscar por nombre...  [✕]    │
+│ │  Buscar por nombre...  []    │
 │ └──────────────────────────────────┘
 │
 │ Total de personajes: 826
@@ -78,7 +78,7 @@ npm run dev
 
 ---
 
-## 🧪 Funcionalidades para Probar
+##  Funcionalidades para Probar
 
 ### 1️⃣ Búsqueda por Nombre
 - Escribe "Rick" en el buscador
@@ -194,7 +194,7 @@ Cmd + Option + I     → Alternativa en Mac
 
 ---
 
-## 🔧 Comandos Útiles
+##  Comandos Útiles
 
 ```bash
 # Ver versión de Node
@@ -235,7 +235,7 @@ netstat -ano | findstr :3000
 
 ---
 
-## 📱 Prueba en Móvil
+##  Prueba en Móvil
 
 ### Desde otro dispositivo en la red local:
 
@@ -252,7 +252,7 @@ netstat -ano | findstr :3000
 
 ---
 
-## 🚀 Compilar para Producción
+##  Compilar para Producción
 
 Cuando quieras hacer deploy:
 
@@ -270,17 +270,17 @@ npm run build
 
 ---
 
-## 💡 Consejos Finales
+##  Consejos Finales
 
-✅ La app funciona sin internet (datos cacheados)
-✅ Todos los cambios en código se reflejan al instante
-✅ No necesitas hacer nada después de editar (Hot Reload automático)
-✅ Puedes parar el servidor con Ctrl + C
-✅ Puedes reiniciar con `npm run dev` nuevamente
+ La app funciona sin internet (datos cacheados)
+ Todos los cambios en código se reflejan al instante
+ No necesitas hacer nada después de editar (Hot Reload automático)
+ Puedes parar el servidor con Ctrl + C
+ Puedes reiniciar con `npm run dev` nuevamente
 
 ---
 
-## 🎉 ¡Listo!
+##  ¡Listo!
 
 Ahora:
 
@@ -288,10 +288,11 @@ Ahora:
 2. Navega al directorio
 3. Ejecuta `npm run dev`
 4. Abre `http://localhost:3000`
-5. ¡Disfruta tu app! 🚀
+5. ¡Disfruta tu app! 
 
 ---
 
 **Última actualización**: 13 de mayo de 2026
 
 Más información en: `README.md`, `INICIO_RAPIDO.md`, `TECH_STACK.md`, `PERSONALIZACION.md`
+

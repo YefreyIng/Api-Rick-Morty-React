@@ -1,7 +1,4 @@
-/* 
-  Estilos principales de la aplicación
-  Diseño moderno, responsivo y con animaciones
-*/
+
 
 * {
   margin: 0;
@@ -10,7 +7,7 @@
 }
 
 :root {
-  /* Colores */
+  
   --primary-color: #1db954;
   --secondary-color: #191414;
   --accent-color: #1ed760;
@@ -21,23 +18,23 @@
   --success-color: #51cf66;
   --warning-color: #ffd93d;
 
-  /* Espaciado */
+  
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
 
-  /* Bordes */
+  
   --border-radius: 8px;
   --border-radius-lg: 12px;
 
-  /* Sombras */
+  
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.3);
 
-  /* Transiciones */
+  
   --transition-fast: 0.2s ease-in-out;
   --transition-normal: 0.3s ease-in-out;
   --transition-slow: 0.5s ease-in-out;
@@ -65,7 +62,7 @@ body {
   flex-direction: column;
 }
 
-/* Utilidades generales */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -76,7 +73,7 @@ body {
   padding: var(--spacing-lg) var(--spacing-md);
 }
 
-/* Buttons */
+
 button {
   font-family: inherit;
   cursor: pointer;
@@ -89,7 +86,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Links */
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -100,7 +97,7 @@ a:hover {
   color: var(--primary-color);
 }
 
-/* Scrollbar personalizada */
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -119,7 +116,7 @@ a:hover {
   background: var(--accent-color);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   :root {
     --spacing-lg: 1.5rem;

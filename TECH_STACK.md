@@ -1,6 +1,6 @@
-# 🔧 Stack Técnico y Detalles Arquitectónicos
+﻿#  Stack Técnico y Detalles Arquitectónicos
 
-## 📦 Dependencias Instaladas
+##  Dependencias Instaladas
 
 ```json
 {
@@ -85,7 +85,7 @@ fetchCharactersBySpecies(species, page=1)
 [Paginación funciona igual]
 ```
 
-## 🎨 Sistema de Diseño (Design System)
+##  Sistema de Diseño (Design System)
 
 ### Variables CSS Globales (`:root`)
 
@@ -123,7 +123,7 @@ fetchCharactersBySpecies(species, page=1)
 --transition-slow: 0.5s ease-in-out
 ```
 
-## 📱 Breakpoints Responsivos
+##  Breakpoints Responsivos
 
 ```css
 /* PC - Desktop */
@@ -259,10 +259,10 @@ useNavigate()       // Navegar programáticamente a /species/:species
 
 ## 🔐 Seguridad
 
-✅ **XSS Protection**: React escapa automáticamente el contenido
-✅ **CORS**: API pública, sin issues de CORS
-✅ **No sensible data**: No se almacena data sensible
-✅ **Validación**: Validamos respuestas de API
+ **XSS Protection**: React escapa automáticamente el contenido
+ **CORS**: API pública, sin issues de CORS
+ **No sensible data**: No se almacena data sensible
+ **Validación**: Validamos respuestas de API
 
 ## 📈 Escalabilidad
 
@@ -285,7 +285,7 @@ El proyecto puede extenderse fácilmente con:
    - Virtual scrolling
    - Progressive Web App
 
-## 🧪 Testing (Estructura lista para tests)
+##  Testing (Estructura lista para tests)
 
 El código está preparado para:
 - Unit tests con Jest + React Testing Library
@@ -327,7 +327,7 @@ const currentPage = 1
  */
 ```
 
-## 🚀 Build para Producción
+##  Build para Producción
 
 ```bash
 npm run build
@@ -341,13 +341,13 @@ npm run build
 #   │   └── ...
 
 # Características:
-# ✅ Minificación
-# ✅ Code splitting
-# ✅ Asset optimization
-# ✅ Source maps (para debugging)
+#  Minificación
+#  Code splitting
+#  Asset optimization
+#  Source maps (para debugging)
 ```
 
-## 🎯 Características Avanzadas Implementadas
+##  Características Avanzadas Implementadas
 
 1. **Smooth Scrolling** - `window.scrollTo({ behavior: 'smooth' })`
 2. **Dynamic Imports** - React Router v6 lazy loading ready
@@ -360,3 +360,4 @@ npm run build
 ---
 
 **Última actualización**: 13 de mayo de 2026
+

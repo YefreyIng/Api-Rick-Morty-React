@@ -1,4 +1,4 @@
-# 🎨 Guía de Personalización y Ejemplos
+﻿#  Guía de Personalización y Ejemplos
 
 ## 🎭 Cambiar Colores de la Aplicación
 
@@ -168,7 +168,7 @@ En `src/styles/app.css`:
 export const translations = {
   es: {
     navbar: {
-      title: '🔬 Rick and Morty',
+      title: ' Rick and Morty',
       inicio: 'Inicio',
       filtrar: 'Filtrar por Especie'
     },
@@ -179,7 +179,7 @@ export const translations = {
   },
   en: {
     navbar: {
-      title: '🔬 Rick and Morty',
+      title: ' Rick and Morty',
       inicio: 'Home',
       filtrar: 'Filter by Species'
     },
@@ -283,7 +283,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <button onClick={toggle}>
-        {isDark ? '☀️' : '🌙'}
+        {isDark ? '' : ''}
       </button>
     </nav>
   )
@@ -408,7 +408,7 @@ export const fetchSpecies = async () => {
 }
 ```
 
-## 🎯 Resumen de Cambios Rápidos
+##  Resumen de Cambios Rápidos
 
 | Cambio | Archivo | Ubicación |
 |--------|---------|-----------|
@@ -422,6 +422,7 @@ export const fetchSpecies = async () => {
 
 ---
 
-¡Diviértete personalizando tu aplicación! 🎨✨
+¡Diviértete personalizando tu aplicación! 
 
 **Última actualización**: 13 de mayo de 2026
+

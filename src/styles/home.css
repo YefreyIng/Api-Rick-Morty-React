@@ -1,4 +1,4 @@
-/* Estilos de la página Home */
+
 
 .home-page {
   flex-grow: 1;
@@ -53,7 +53,7 @@
   }
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   .home-header h1 {
     font-size: 2rem;

@@ -1,12 +1,7 @@
 import React from 'react'
 import '../styles/pagination.css'
 
-/**
- * Componente de paginación
- * @param {number} currentPage - Página actual
- * @param {number} totalPages - Total de páginas
- * @param {Function} onPageChange - Callback para cambio de página
- */
+
 function Pagination({ currentPage, totalPages, onPageChange }) {
   const getPageNumbers = () => {
     const pages = []

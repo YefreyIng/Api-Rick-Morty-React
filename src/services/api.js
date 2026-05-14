@@ -1,14 +1,5 @@
-/**
- * Servicio para consumir la API de Rick and Morty
- */
-
 const API_BASE_URL = 'https://rickandmortyapi.com/api';
 
-/**
- * Obtiene todos los personajes con paginación
- * @param {number} page - Número de página
- * @returns {Promise} Datos de personajes
- */
 export const fetchCharacters = async (page = 1) => {
   try {
     const response = await fetch(`${API_BASE_URL}/character?page=${page}`);
@@ -20,12 +11,7 @@ export const fetchCharacters = async (page = 1) => {
   }
 };
 
-/**
- * Busca personajes por nombre
- * @param {string} name - Nombre del personaje
- * @param {number} page - Número de página
- * @returns {Promise} Datos de personajes filtrados
- */
+
 export const searchCharactersByName = async (name, page = 1) => {
   try {
     const response = await fetch(`${API_BASE_URL}/character?name=${name}&page=${page}`);
@@ -37,12 +23,7 @@ export const searchCharactersByName = async (name, page = 1) => {
   }
 };
 
-/**
- * Obtiene personajes filtrados por especie
- * @param {string} species - Especie del personaje
- * @param {number} page - Número de página
- * @returns {Promise} Datos de personajes filtrados
- */
+
 export const fetchCharactersBySpecies = async (species, page = 1) => {
   try {
     const response = await fetch(`${API_BASE_URL}/character?species=${species}&page=${page}`);
@@ -54,11 +35,7 @@ export const fetchCharactersBySpecies = async (species, page = 1) => {
   }
 };
 
-/**
- * Obtiene un personaje por ID
- * @param {number} id - ID del personaje
- * @returns {Promise} Datos del personaje
- */
+
 export const fetchCharacterById = async (id) => {
   try {
     const response = await fetch(`${API_BASE_URL}/character/${id}`);

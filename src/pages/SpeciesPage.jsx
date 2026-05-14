@@ -7,9 +7,7 @@ import Loader from '../components/Loader'
 import ErrorMessage from '../components/ErrorMessage'
 import '../styles/species-page.css'
 
-/**
- * Página que muestra personajes filtrados por especie
- */
+
 function SpeciesPage() {
   const { species } = useParams()
   const [characters, setCharacters] = useState([])
@@ -19,12 +17,12 @@ function SpeciesPage() {
   const [totalPages, setTotalPages] = useState(1)
   const [info, setInfo] = useState(null)
 
-  // Carga de personajes por especie
+  
   useEffect(() => {
     loadCharactersBySpecies()
   }, [species])
 
-  // Cambio de página
+  
   useEffect(() => {
     loadCharactersBySpecies()
   }, [currentPage])

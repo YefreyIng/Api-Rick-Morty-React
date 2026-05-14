@@ -2,10 +2,7 @@ import React from 'react'
 import CharacterCard from './CharacterCard'
 import '../styles/character-list.css'
 
-/**
- * Componente que renderiza la lista de personajes en grid
- * @param {Array} characters - Array de personajes
- */
+
 function CharacterList({ characters }) {
   return (
     <div className="character-list">

@@ -1,9 +1,7 @@
 import React from 'react'
 import '../styles/loader.css'
 
-/**
- * Componente de carga (spinner)
- */
+
 function Loader() {
   return (
     <div className="loader-container">

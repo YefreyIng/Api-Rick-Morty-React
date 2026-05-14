@@ -1,4 +1,4 @@
-/* Estilos del Navbar */
+
 
 .navbar {
   background: linear-gradient(90deg, var(--secondary-color), #1a1a2e);
@@ -63,7 +63,7 @@
   background: rgba(29, 185, 84, 0.1);
 }
 
-/* Dropdown */
+
 .dropdown {
   position: relative;
 }
@@ -101,12 +101,12 @@
   z-index: 1000;
 }
 
-/* Mostrar dropdown cuando está activo */
+
 .dropdown-menu.show {
   display: flex;
 }
 
-/* Hover desktop */
+
 @media (hover: hover) {
   .nav-item:hover .dropdown-menu {
     display: flex;
@@ -141,7 +141,7 @@
   padding-left: var(--spacing-lg);
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   .navbar-container {
     padding: var(--spacing-sm);
@@ -164,7 +164,7 @@
     position: relative;
   }
 
-  /* Dropdown en tablet - posición mejorada */
+  
   .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -215,7 +215,7 @@
     width: 100%;
   }
 
-  /* Dropdown en móvil - mejor posicionamiento */
+  
   .dropdown-menu {
     position: absolute;
     top: 100%;

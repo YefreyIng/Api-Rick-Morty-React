@@ -1,4 +1,4 @@
-/* Estilos de paginación */
+
 
 .pagination {
   display: flex;
@@ -74,7 +74,7 @@
   padding: 0 var(--spacing-xs);
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   .pagination {
     padding: var(--spacing-lg) var(--spacing-md);

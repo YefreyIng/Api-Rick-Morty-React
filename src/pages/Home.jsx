@@ -7,9 +7,7 @@ import Loader from '../components/Loader'
 import ErrorMessage from '../components/ErrorMessage'
 import '../styles/home.css'
 
-/**
- * Página principal que muestra todos los personajes con búsqueda y paginación
- */
+
 function Home() {
   const [characters, setCharacters] = useState([])
   const [loading, setLoading] = useState(true)
@@ -19,12 +17,12 @@ function Home() {
   const [searchTerm, setSearchTerm] = useState('')
   const [info, setInfo] = useState(null)
 
-  // Carga inicial de personajes
+  
   useEffect(() => {
     loadCharacters()
   }, [])
 
-  // Efecto para búsqueda
+  
   useEffect(() => {
     if (searchTerm.trim()) {
       searchCharacters()
@@ -34,7 +32,7 @@ function Home() {
     }
   }, [searchTerm])
 
-  // Efecto para cambio de página
+  
   useEffect(() => {
     if (searchTerm.trim()) {
       searchCharacters()

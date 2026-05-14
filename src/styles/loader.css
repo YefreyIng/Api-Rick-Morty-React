@@ -1,4 +1,4 @@
-/* Estilos del componente Loader */
+
 
 .loader-container {
   display: flex;
@@ -40,7 +40,7 @@
   }
 }
 
-/* Responsivo */
+
 @media (max-width: 480px) {
   .loader-container {
     min-height: 200px;

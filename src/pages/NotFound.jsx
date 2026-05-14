@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/not-found.css'
 
-/**
- * Página 404 - Ruta no encontrada
- */
+
 function NotFound() {
   return (
     <div className="not-found-page">
@@ -14,7 +12,7 @@ function NotFound() {
         <p>Parece que Rick ha viajado a una dimensión equivocada y llevó esta página con él.</p>
         
         <div className="error-illustration">
-          <span>🌌</span>
+          <span>O</span>
         </div>
 
         <Link to="/" className="back-home-button">

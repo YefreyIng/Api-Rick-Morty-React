@@ -1,10 +1,7 @@
 import React from 'react'
 import '../styles/character-card.css'
 
-/**
- * Componente de tarjeta individual de personaje
- * @param {Object} character - Datos del personaje
- */
+
 function CharacterCard({ character }) {
   return (
     <div className="character-card">
