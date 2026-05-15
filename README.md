@@ -78,3 +78,5 @@ Endpoints principales:
 
 - El proyecto usa React 18 y Vite 4.
 
+Hecho por Yefrey Medina
+
