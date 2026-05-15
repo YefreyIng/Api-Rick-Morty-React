@@ -2,22 +2,30 @@
 
 .home-page {
   flex-grow: 1;
-  padding: var(--spacing-md);
+  padding: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 .home-header {
   text-align: center;
-  padding: var(--spacing-xl) var(--spacing-md);
-  background: linear-gradient(135deg, rgba(29, 185, 84, 0.1), rgba(30, 215, 96, 0.05));
+  padding: clamp(2rem, 3vw, 3rem) clamp(1.5rem, 4vw, 3rem);
+  background: rgba(13, 19, 35, 0.82);
   border-radius: var(--border-radius-lg);
-  border: 2px solid rgba(29, 185, 84, 0.3);
-  margin-bottom: var(--spacing-lg);
-  animation: slideInDown 0.6s ease-out;
+  border: 1px solid rgba(29, 185, 84, 0.18);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideInDown 0.65s ease-out;
 }
 
 .home-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 0.75rem;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.05;
   background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -26,26 +34,29 @@
 
 .home-header p {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
   margin: 0;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .results-info {
   text-align: center;
   padding: var(--spacing-md) 0;
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
 }
 
 .results-info strong {
   color: var(--accent-color);
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1vw, 1.2rem);
 }
 
 @keyframes slideInDown {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-22px);
   }
   to {
     opacity: 1;
