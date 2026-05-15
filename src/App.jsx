@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import SpeciesPage from './pages/SpeciesPage'
+import CharacterDetail from './pages/CharacterDetail'
 import NotFound from './pages/NotFound'
 import './styles/app.css'
 
@@ -59,6 +60,10 @@ function InnerApp() {
         <Route
           path="/species/:species"
           element={<SpeciesPage statusFilter={statusFilter} />}
+        />
+        <Route
+          path="character/:id"
+          element={<CharacterDetail />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
