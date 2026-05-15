@@ -46,6 +46,12 @@ Abre el navegador en:
 
 http://localhost:3000
 
+## Deploy en Vercel
+
+La aplicación también está publicada aquí:
+
+https://api-rick-morty-react-seven.vercel.app/
+
 ## Compilar para produccion
 
 ```bash
