@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import SpeciesPage from './pages/SpeciesPage'
@@ -7,7 +7,17 @@ import NotFound from './pages/NotFound'
 import './styles/app.css'
 
 
-function App() {
+function InnerApp() {
+  const [searchTerm, setSearchTerm] = useState('')
+  const [statusFilter, setStatusFilter] = useState('')
+  const navigate = useNavigate()
+
+  const resetFilters = () => {
+    setSearchTerm('')
+    setStatusFilter('')
+    navigate('/')
+  }
+
   useEffect(() => {
     let frameId = null
 
@@ -29,12 +39,38 @@ function App() {
   }, [])
 
   return (
-    <Router>
-      <Navbar />
+    <>
+      <Navbar
+        statusFilter={statusFilter}
+        onStatusChange={setStatusFilter}
+        onReset={resetFilters}
+      />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/species/:species" element={<SpeciesPage />} />
+        <Route
+          path="/"
+          element={
+            <Home
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+              statusFilter={statusFilter}
+            />
+          }
+        />
+        <Route
+          path="/species/:species"
+          element={<SpeciesPage statusFilter={statusFilter} />}
+        />
         <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
+  )
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/*" element={<InnerApp />} />
       </Routes>
     </Router>
   )

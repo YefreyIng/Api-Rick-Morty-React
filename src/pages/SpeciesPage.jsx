@@ -8,7 +8,7 @@ import ErrorMessage from '../components/ErrorMessage'
 import '../styles/species-page.css'
 
 
-function SpeciesPage() {
+function SpeciesPage({ statusFilter }) {
   const { species } = useParams()
   const [characters, setCharacters] = useState([])
   const [loading, setLoading] = useState(true)
@@ -19,19 +19,19 @@ function SpeciesPage() {
 
   
   useEffect(() => {
-    loadCharactersBySpecies()
-  }, [species])
+    setCurrentPage(1)
+  }, [species, statusFilter])
 
   
   useEffect(() => {
     loadCharactersBySpecies()
-  }, [currentPage])
+  }, [species, statusFilter, currentPage])
 
   const loadCharactersBySpecies = async () => {
     try {
       setLoading(true)
       setError(null)
-      const data = await fetchCharactersBySpecies(species, currentPage)
+      const data = await fetchCharactersBySpecies(species, statusFilter, currentPage)
       setCharacters(data.results)
       setInfo(data.info)
       setTotalPages(data.info.pages)

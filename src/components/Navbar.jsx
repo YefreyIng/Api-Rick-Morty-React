@@ -3,21 +3,40 @@ import { Link, useNavigate } from 'react-router-dom'
 import '../styles/navbar.css'
 
 
-function Navbar() {
+function Navbar({ statusFilter, onStatusChange, onReset }) {
   const navigate = useNavigate()
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [isStatusDropdownOpen, setIsStatusDropdownOpen] = useState(false)
 
   const handleSpeciesClick = (species) => {
     navigate(`/species/${species}`)
     setIsDropdownOpen(false)
+    setIsStatusDropdownOpen(false)
+  }
+
+  const handleStatusClick = (status) => {
+    onStatusChange(status)
+    setIsStatusDropdownOpen(false)
+    setIsDropdownOpen(false)
+  }
+
+  const handleReset = () => {
+    onReset()
+    setIsDropdownOpen(false)
+    setIsStatusDropdownOpen(false)
   }
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen)
   }
 
+  const toggleStatusDropdown = () => {
+    setIsStatusDropdownOpen(!isStatusDropdownOpen)
+  }
+
   const closeDropdown = () => {
     setIsDropdownOpen(false)
+    setIsStatusDropdownOpen(false)
   }
 
   return (
@@ -70,6 +89,43 @@ function Navbar() {
                 Enfermedades
               </button>
             </div>
+          </li>
+
+          <li className={`nav-item dropdown status-dropdown ${isStatusDropdownOpen ? 'active' : ''}`}>
+            <button className="nav-link dropdown-toggle" onClick={toggleStatusDropdown}>
+              {statusFilter ? (statusFilter === 'alive' ? 'Vivo' : statusFilter === 'dead' ? 'Muerto' : 'Desconocido') : 'Filtrar por Estado ▼'}
+            </button>
+            <div className={`dropdown-menu ${isStatusDropdownOpen ? 'show' : ''}`}>
+              <button
+                onClick={() => handleStatusClick('')}
+                className="dropdown-item"
+              >
+                Todos los estados
+              </button>
+              <button
+                onClick={() => handleStatusClick('alive')}
+                className="dropdown-item"
+              >
+                Vivo
+              </button>
+              <button
+                onClick={() => handleStatusClick('dead')}
+                className="dropdown-item"
+              >
+                Muerto
+              </button>
+              <button
+                onClick={() => handleStatusClick('unknown')}
+                className="dropdown-item"
+              >
+                Desconocido
+              </button>
+            </div>
+          </li>
+          <li className="nav-item">
+            <button className="nav-link reset-button" onClick={handleReset}>
+              Reiniciar filtros
+            </button>
           </li>
         </ul>
       </div>
