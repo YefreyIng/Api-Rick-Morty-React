@@ -7,6 +7,7 @@ function Navbar({ statusFilter, onStatusChange, onReset }) {
   const navigate = useNavigate()
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const [isStatusDropdownOpen, setIsStatusDropdownOpen] = useState(false)
+  const [isMobileOpen, setIsMobileOpen] = useState(false)
 
   const handleSpeciesClick = (species) => {
     navigate(`/species/${species}`)
@@ -37,6 +38,7 @@ function Navbar({ statusFilter, onStatusChange, onReset }) {
   const closeDropdown = () => {
     setIsDropdownOpen(false)
     setIsStatusDropdownOpen(false)
+    setIsMobileOpen(false)
   }
 
   return (
@@ -46,7 +48,17 @@ function Navbar({ statusFilter, onStatusChange, onReset }) {
           Rick and Morty
         </Link>
 
-        <ul className="nav-menu">
+        <button
+          className={`hamburger ${isMobileOpen ? 'open' : ''}`}
+          onClick={() => setIsMobileOpen(!isMobileOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul className={`nav-menu ${isMobileOpen ? 'open' : ''}`}>
           <li className="nav-item">
             <Link to="/" className="nav-link" onClick={closeDropdown}>
               Inicio
