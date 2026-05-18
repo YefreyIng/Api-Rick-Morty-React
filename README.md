@@ -27,12 +27,39 @@ Aplicacion web construida con React, Vite y react-router-dom que consume la API 
 
 ## Instalacion
 
-1. Abre una terminal en el directorio del proyecto.
-2. Ejecuta:
+1. Abre una terminal o PowerShell.
+2. Ve al directorio del proyecto. Por ejemplo:
+
+```bash
+cd "c:\Users\yefre\OneDrive\Escritorio\API de Rick and Morty"
+```
+
+3. Verifica que Node.js y npm estén instalados:
+
+```bash
+node -v
+npm -v
+```
+
+4. Instala las dependencias del proyecto:
 
 ```bash
 npm install
 ```
+
+5. Si la instalación se completa sin errores, inicia la aplicación en modo desarrollo:
+
+```bash
+npm run dev
+```
+
+6. Abre el navegador en la dirección que muestre Vite, por ejemplo:
+
+```text
+http://localhost:3000
+```
+
+> Si no tienes Node.js instalado, descárgalo desde https://nodejs.org/.
 
 ## Ejecucion en desarrollo
 
