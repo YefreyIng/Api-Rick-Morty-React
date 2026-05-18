@@ -56,3 +56,15 @@ export const fetchCharacterById = async (id) => {
     throw error;
   }
 };
+
+export const fetchEpisodesByIds = async (ids) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/episode/${ids}`);
+    if (!response.ok) throw new Error('Error al obtener episodios');
+    const data = await response.json();
+    return Array.isArray(data) ? data : [data];
+  } catch (error) {
+    console.error('Error:', error);
+    throw error;
+  }
+};

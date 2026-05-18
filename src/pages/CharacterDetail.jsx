@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { fetchCharacterById } from '../services/api'
+import { fetchCharacterById, fetchEpisodesByIds } from '../services/api'
 import Loader from '../components/Loader'
 import ErrorMessage from '../components/ErrorMessage'
 import '../styles/character-detail.css'
@@ -8,16 +8,39 @@ import '../styles/character-detail.css'
 function CharacterDetail() {
   const { id } = useParams()
   const [character, setCharacter] = useState(null)
+  const [episodes, setEpisodes] = useState([])
+  const [showEpisodesModal, setShowEpisodesModal] = useState(false)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const modalRef = useRef(null)
+
+  const openEpisodesModal = () => {
+    const cardElement = document.querySelector('.character-detail-card')
+    if (cardElement) {
+      cardElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      window.setTimeout(() => setShowEpisodesModal(true), 220)
+    } else {
+      setShowEpisodesModal(true)
+    }
+  }
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+
     const loadCharacter = async () => {
       try {
         setLoading(true)
         setError(null)
         const data = await fetchCharacterById(id)
         setCharacter(data)
+
+        if (data?.episode?.length) {
+          const episodeIds = data.episode.map((url) => url.split('/').pop()).join(',')
+          const episodeData = await fetchEpisodesByIds(episodeIds)
+          setEpisodes(episodeData)
+        } else {
+          setEpisodes([])
+        }
       } catch (err) {
         setError('No se pudo cargar la descripción del personaje. Intenta de nuevo.')
         console.error(err)
@@ -30,6 +53,12 @@ function CharacterDetail() {
       loadCharacter()
     }
   }, [id])
+
+  useEffect(() => {
+    if (showEpisodesModal && modalRef.current) {
+      modalRef.current.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }, [showEpisodesModal])
 
   return (
     <div className="character-detail-page">
@@ -84,6 +113,48 @@ function CharacterDetail() {
                   <span className="detail-value">{character.episode?.length || 0}</span>
                 </p>
               </div>
+
+              {episodes.length > 0 && (
+                <div className="episode-summary-inline">
+                  <span className="episode-summary">Ver lista completa de episodios</span>
+                  <button
+                    type="button"
+                    className="episode-toggle"
+                    onClick={openEpisodesModal}
+                  >
+                    Ver todos
+                  </button>
+
+                  {showEpisodesModal && (
+                    <div className="episode-modal-overlay">
+                      <div className="episode-modal">
+                        <div className="episode-modal-header">
+                          <div>
+                            <h3>Episodios</h3>
+                            <p>{episodes.length} capítulos disponibles</p>
+                          </div>
+                          <button
+                            type="button"
+                            className="modal-close"
+                            onClick={() => setShowEpisodesModal(false)}
+                          >
+                            Cerrar
+                          </button>
+                        </div>
+
+                        <div ref={modalRef} className="episode-modal-grid">
+                          {episodes.map((episode) => (
+                            <span key={episode.id} className="episode-chip episode-chip-modal">
+                              <strong>{episode.episode}</strong>
+                              {episode.name}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         ) : (

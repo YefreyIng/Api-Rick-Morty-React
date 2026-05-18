@@ -59,12 +59,6 @@ function Navbar({ statusFilter, onStatusChange, onReset }) {
         </button>
 
         <ul className={`nav-menu ${isMobileOpen ? 'open' : ''}`}>
-          <li className="nav-item">
-            <Link to="/" className="nav-link" onClick={closeDropdown}>
-              Inicio
-            </Link>
-          </li>
-
           <li className={`nav-item dropdown ${isDropdownOpen ? 'active' : ''}`}>
             <button className="nav-link dropdown-toggle" onClick={toggleDropdown}>
               Filtrar por Especie ▼
