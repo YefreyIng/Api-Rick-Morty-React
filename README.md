@@ -4,11 +4,22 @@ Aplicacion web construida con React, Vite y react-router-dom que consume la API 
 
 ## Descripcion
 
-- Muestra personajes de Rick and Morty con imagen, nombre, especie, estado y genero.
-- Permite buscar por nombre en tiempo real.
-- Filtra personajes por especie usando rutas dinamicas.
-- Maneja cargas, errores y una pagina 404 personalizada.
-- Funciona en escritorio, tablet y movil.
+- Muestra personajes de Rick and Morty con imagen, nombre, especie, estado y género.
+- Permite buscar por nombre en tiempo real con un campo de búsqueda en la página principal.
+- Incluye filtros en la barra de navegación: especie, estado y botón para reiniciar filtros.
+- Ofrece rutas dinámicas por especie con URL como `/species/Human` o `/species/Alien`.
+- Cada tarjeta de personaje muestra información clave y enlaza a la página de detalle.
+- Maneja cargas, errores y una página 404 personalizada.
+- Funciona en escritorio, tablet y móvil.
+
+## Funcionalidades principales
+
+- Búsqueda en tiempo real: escribe un nombre y la lista se actualiza automáticamente.
+- Filtros de especie: selecciona una especie en el menú y navega a la ruta correspondiente.
+- Filtros de estado: filtra personajes por `Vivo`, `Muerto` o `Desconocido`.
+- Reiniciar filtros: elimina todos los filtros y vuelve a la lista general.
+- Tarjetas de personaje: cada card muestra imagen, nombre, especie, estado, género y ubicación.
+- Paginación: muestra varias páginas de resultados cuando hay más de un conjunto de personajes.
 
 ## Estructura del proyecto
 
@@ -27,11 +38,11 @@ Aplicacion web construida con React, Vite y react-router-dom que consume la API 
 
 ## Instalacion
 
-1. Abre una terminal o PowerShell.
+1. Abre una terminal preferiblemente cmdñ.
 2. Ve al directorio del proyecto. Por ejemplo:
 
 ```bash
-cd "c:\Users\yefre\OneDrive\Escritorio\API de Rick and Morty"
+cd "c:\Users\yefre\OneDrive\Escritorio\rick-and-morty-app"
 ```
 
 3. Verifica que Node.js y npm estén instalados:
